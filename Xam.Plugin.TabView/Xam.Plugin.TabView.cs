@@ -417,7 +417,7 @@ namespace Xam.Plugin.TabView
         #endregion
 
         #region HeaderTabTextFontSize
-        [TypeConverter(typeof(FontSizeConverter))]
+        [Xamarin.Forms.TypeConverter(typeof(FontSizeConverter))]
         public double HeaderTabTextFontSize
         {
             get { return (double)GetValue(HeaderTabTextFontSizeProperty); }
@@ -703,7 +703,7 @@ namespace Xam.Plugin.TabView
         }
 
         public static readonly BindableProperty HeaderTabTextFontSizeProperty = BindableProperty.Create(nameof(HeaderTabTextFontSize), typeof(double), typeof(TabItem), TabDefaults.DefaultTextSize);
-        [TypeConverter(typeof(FontSizeConverter))]
+        [Xamarin.Forms.TypeConverter(typeof(FontSizeConverter))]
         public double HeaderTabTextFontSize
         {
             get => (double)GetValue(HeaderTabTextFontSizeProperty);
