@@ -88,6 +88,11 @@ namespace TabViewSample
             tabView.HeaderTabTextColor = tabView.HeaderTabTextColor == Color.LightGreen ? Color.White : Color.LightGreen;
         }
 
+        private void Button_ChangeBackgroundColor(object sender, EventArgs e)
+        {
+            tabView.HeaderBackgroundColor = tabView.HeaderBackgroundColor == Color.Black ? Color.Blue : Color.Black;
+        }
+
         private void Button_ChangeSelectionUnderlineColor(object sender, EventArgs e)
         {
             tabView.HeaderSelectionUnderlineColor = tabView.HeaderSelectionUnderlineColor == Color.Yellow ? Color.White : Color.Yellow;

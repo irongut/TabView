@@ -15,6 +15,7 @@
                     <Button Text="Add Tab" Clicked="Button_AddTab" HorizontalOptions="Start"/>
                     <Button Text="Remove Last Tab" Clicked="Button_RemoveLastTab" HorizontalOptions="Start"/>
                     <Button Text="Change header text color" Clicked="Button_ChangeTextColor" HorizontalOptions="Start"/>
+                    <Button Text="Change header background color" Clicked="Button_ChangeBackgroundColor" HorizontalOptions="Start"/>
                     <Button Text="Change selection underline color" Clicked="Button_ChangeSelectionUnderlineColor" HorizontalOptions="Start"/>
                     <Button Text="Change selection underline thickness" Clicked="Button_ChangeSelectionUnderlineThickness" HorizontalOptions="Start"/>
                     <Button Text="Change selection underline width" Clicked="Button_ChangeSelectionUnderlineWidth" HorizontalOptions="Start"/>
