@@ -15,11 +15,25 @@ namespace TabViewSample
         {
             InitializeComponent();
 
+            string imageFilename = null;
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    imageFilename = "Icon-Small-40.png";
+                    break;
+                case Device.Android:
+                    imageFilename = "icon.png";
+                    break;
+                case Device.UWP:
+                    imageFilename = "Assets/StoreLogo.png";
+                    break;
+            }
+
             tabView = new TabViewControl(new List<TabItem>()
             {
-                new TabItem("Tab 1", new Label{Text = "Tab 1", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, BackgroundColor = Color.Red}),
-                new TabItem("Tab 2", new Label{Text = "Tab 2", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, BackgroundColor = Color.Green}),
-                new TabItem("Tab 3", new Label{Text = "Tab 3", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, BackgroundColor = Color.Blue}),
+                new TabItem("Tab 1", new Label{Text = "Tab 1", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, BackgroundColor = Color.Red}, ImageSource.FromFile(imageFilename)),
+                new TabItem("Tab 2", new Label{Text = "Tab 2", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, BackgroundColor = Color.Green}, ImageSource.FromFile(imageFilename)),
+                new TabItem("Tab 3", new Label{Text = "Tab 3", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, BackgroundColor = Color.Blue}, ImageSource.FromFile(imageFilename)),
             });
             tabView.VerticalOptions = LayoutOptions.FillAndExpand;
             theSl.Children.Add(tabView);
