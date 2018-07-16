@@ -237,9 +237,9 @@ namespace Xam.Plugin.TabView
             {
                 Margin = new Thickness(0, 10, 0, 0),
                 BindingContext = tab,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                BackgroundColor = Color.Transparent,
+                HorizontalOptions = LayoutOptions.Fill,
                 VerticalOptions = LayoutOptions.Center,
-                WidthRequest = tab.HeaderIconSize,
                 HeightRequest = tab.HeaderIconSize
             };
             headerIcon.SetBinding(Image.SourceProperty, nameof(TabItem.HeaderIcon));
@@ -251,7 +251,7 @@ namespace Xam.Plugin.TabView
                 BindingContext = tab,
                 VerticalTextAlignment = TextAlignment.Start,
                 HorizontalTextAlignment = TextAlignment.Center,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.Fill, 
                 VerticalOptions = LayoutOptions.Center
             };
             headerLabel.SetBinding(Label.TextProperty, nameof(TabItem.HeaderText));
@@ -623,6 +623,7 @@ namespace Xam.Plugin.TabView
         }
     }
 
+    #region TabItem
     [ContentProperty(nameof(Content))]
     public class TabItem : BindableObject
     {
@@ -724,4 +725,5 @@ namespace Xam.Plugin.TabView
             set { SetValue(HeaderTabTextFontAttributesProperty, value); }
         }
     }
+    #endregion
 }
